@@ -46,7 +46,7 @@ body {
 .displaysection {
 	display: flex;
 	justify-content: center;
-	justify-content: space-evenly;
+	justify-content: space-around;
 }
 #calorieselection {
 	display: flex;
@@ -66,6 +66,12 @@ body {
 	text-shadow: 1px 2px 2px rgba(158, 34, 34, 0.411);
 	text-transform: uppercase;
 	text-shadow: #ce6666 5px 5px 10px;
+}
+#firstgroup {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 50vh;
 }
 #addNew {
 	font-size: 1.4em;
@@ -107,8 +113,8 @@ button {
 	margin-right: 0.5em;
 }
 #recipes {
-	max-width: 60%;
-	min-width: 500px;
+	max-width: 70%;
+	min-width: 60%;
 }
 
 li {
@@ -200,10 +206,12 @@ li > button:hover {
 .recipeingredients {
 	display: flex;
 	align-items: center;
+	font-size: 1.2em;
 }
 #content > div {
 	margin: 0 0 1em 0;
 	padding: 1em;
+	padding-bottom: 3.5em;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	background: linear-gradient(
 		to right bottom,
@@ -211,4 +219,7 @@ li > button:hover {
 		rgba(255, 255, 255, 0.7)
 	);
 	border-radius: 8%;
+}
+.recipemethod {
+	font-size: 1.2em;
 }
