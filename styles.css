@@ -61,3 +61,8 @@ div {
 span {
 	margin-left: 1em;
 }
+
+li {
+	display: flex;
+	justify-content: space-between;
+}
