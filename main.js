@@ -23,6 +23,7 @@ async function initialIngredients() {
   const { payload } = await ingredients.json();
   renderList(payload);
 }
+let recipesToRender = [];
 
 async function getRecipes() {
   content.innerHTML = "";
@@ -33,18 +34,21 @@ async function getRecipes() {
   const ourRecipes = await fetch("http://localhost:5000/recipes");
   const recipeData = await ourRecipes.json();
   const recipes = recipeData.payload;
-  console.log("second");
-  const recipesToRender = recipes.filter((recipe) => {
-    console.log(recipe.name);
+  let calories = 2000;
+  calories = slider.value;
+
+  recipesToRender = recipes.filter((recipe) => {
+    
     for (let i = 0; i < ingredients.length; i++) {
-      console.log(ingredients[i].name);
-      if (recipe.keywords.includes(ingredients[i].name)) {
-        //   recipesToRender.push(recipe)
+      if (
+        recipe.keywords.includes(ingredients[i].name) &&
+        recipe.calories < slider.value
+      ) {
+        console.log(recipe.name);
         return recipe;
       }
     }
   });
-
   renderRecipes(recipesToRender);
 }
 
