@@ -11,26 +11,29 @@
 	<body>
 		<div class="main">
 			<div class="container">
-				<h1 id="title">Welcome to our recipe finder</h1>
+				<h1 id="title">Recipe finder</h1>
 				<div class="forms">
 					<form action="">
-						<label for="ingredient">Add new ingredient</label>
+						<label for="ingredient" id="addNew">Add new ingredient:</label>
 						<input type="text" placeholder="Add new ingredient" required id="addI" />
-						<button type="submit" id="submitI">SUBMIT</button>
+						<button type="submit" id="submitI">Add Ingredient</button>
 					</form>
-					<button id="showrecipe">Show Recipes</button>
 				</div>
-				<div class="displaysection" >
-					<div id="ingredients">Ingredient List</div>
+				<div class="displaysection">
+					<div id="ingredients"><p id="ingredientstitle">Ingredient List</p></div>
 					<div id="recipes">
-						<div><label for="calories">How many calories</label>
-							<input type="range" id="calories" min="0" max="2000" name="calories" /><span
-								id="showCal"
-								>1000</span>
-					</div>
-						<div id='content'> 
-
+						<div id="calorieselection">
+							<label for="calories">How many calories</label>
+							<input
+								type="range"
+								id="calories"
+								min="0"
+								max="2000"
+								name="calories"
+							/><span id="showCal">1000</span>
+							<button id="showrecipe"><span>Show Recipes</span></button>
 						</div>
+						<div id="content"></div>
 					</div>
 				</div>
 			</div>
