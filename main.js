@@ -6,7 +6,9 @@ const ingredients = document.querySelector('#ingredients');
 const showRecipeButton = document.querySelector('#showrecipe');
 const list = document.createElement('ol');
 const content = document.querySelector('#content');
-
+/**
+ * sending a POST request with the input field the the ingredients route
+ */
 async function sendIngredient(e) {
 	e.preventDefault();
 	const ingredient = addIngredientForm.value;
@@ -17,13 +19,18 @@ async function sendIngredient(e) {
 	});
 	initialIngredients();
 }
-
+/**
+ * fetch the ingredients from the db and render the list of ingredients straight away
+ */
 async function initialIngredients() {
 	const ingredients = await fetch('http://localhost:5000/ingredients');
 	const { payload } = await ingredients.json();
 	renderList(payload);
 }
-
+/**
+ * fetch all the recipes from the second API and filters them according to the specified
+ * calories wanted and incredients in the list
+ */
 let recipesToRender = [];
 async function getRecipes() {
 	content.innerHTML = '';
@@ -35,7 +42,7 @@ async function getRecipes() {
 	const recipes = recipeData.payload;
 
 	let calories = parseInt(slider.value);
-	console.log(calories);
+	// selecting the needed recipes and adding them to a new array to be rendered later on
 	recipesToRender = recipes.filter((recipe) => {
 		for (let i = 0; i < ingredients.length; i++) {
 			if (recipe.keywords.includes(ingredients[i].name) && recipe.calories < calories) {
@@ -46,7 +53,9 @@ async function getRecipes() {
 
 	renderRecipes(recipesToRender);
 }
-// make routers
+/**
+ * going through all the ingredients and appending a list item for each of them
+ */
 function renderList(array) {
 	list.innerHTML = '';
 	for (let i = 0; i < array.length; i++) {
@@ -63,7 +72,9 @@ function renderList(array) {
 	// array.forEach((item) => {});
 	ingredients.appendChild(list);
 }
-
+/**
+ * using fetch and the DELETE method to delete a particular ingredient from the list/database table
+ */
 async function deleteIngredient(e) {
 	let id = e.target.parentNode.attributes.dataid.value;
 	console.log(id);
@@ -73,7 +84,9 @@ async function deleteIngredient(e) {
 	});
 	initialIngredients();
 }
-
+/**
+ * rendering the recipes /adding specific classes to each element in particular so we can target later on in the stylesheet
+ */
 function renderRecipes(array) {
 	array.forEach((item) => {
 		const recipeDiv = document.createElement('div');
