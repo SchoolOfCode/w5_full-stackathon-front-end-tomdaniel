@@ -1,6 +1,7 @@
+
 <h1 align="center">Welcome to Recipe Finder 👋</h1>
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/version-v1-blue.svg?cacheSeconds=2592000" />
+<p align="center">
+  <img alt="Version" src="./images/salad.png/" width = "400" />
 </p>
 
 > Our recipe finder
@@ -24,7 +25,17 @@ Another function of our app is the calories slider. Our users can select the max
 
 This project was created using postgres SQL, NodeJS, ExpressJS, HTML, CSS, Vanilla JS. 
 
-This project demonstrates a fully RESTful API with a full suite of CRUD operations available. We were able to learn a lot during this project including implementing CORS for the first time. 
+This project demonstrates a fully RESTful API with a full suite of CRUD operations available. We were able to learn a lot during this project including implementing CORS for the first time. This is a full-stack application wiuth both front and back end built from scratch
+
+This project was built duirng Week 5 of our 16-week bootcamp at the School of Code (www.schoolodcode.co.uk)
+
+## Future Goals
+
+Stretch goals for the project would be to make a more accurate recipe finder that only returns the recipes that match the most available ingredients. 
+
+We would like to add functionality to show the quantity of ingredients available. 
+
+We would also like to add functionality for users to be able to add their own recipes. 
 
 ## Usage
 
@@ -37,6 +48,11 @@ This project demonstrates a fully RESTful API with a full suite of CRUD operatio
 | PUT    | /recipes | { body }                                                               | updated list of ingredients or updated recipe                           | { success: Boolean, payload: item }       |
 | PATCH  | /recipes | { body }                                                               | updated list of ingredients or updated recipe                               | { success: Boolean, payload: item }       |
 | DELETE | /recipes/ <id> |                                                                        | ingredient deleted                          | { success: Boolean, payload: item }       |
+
+
+## POSTMAN documentation
+
+https://documenter.getpostman.com/view/17104380/TzzGFYbe
 
 
 ## Show your support
