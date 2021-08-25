@@ -78,7 +78,7 @@ function renderList(array) {
 async function deleteIngredient(e) {
 	let id = e.target.parentNode.attributes.dataid.value;
 	console.log(id);
-	fetch(`http://localhost:5000/ingredients/${id}`, {
+	await fetch(`http://localhost:5000/ingredients/${id}`, {
 		method: 'DELETE',
 		headers: { 'Content-Type': 'application/json' },
 	});
