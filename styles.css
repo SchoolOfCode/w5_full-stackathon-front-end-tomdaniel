@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap');
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	height: 100%;
+}
+body {
+	font-family: 'EB Garamond', serif;
+	margin: auto;
+	padding-top: 2em;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	background: url('./images/backg.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+.main {
+	margin: auto;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.container {
+	background: white;
+	min-height: 90vh;
+	width: 85%;
+	background: linear-gradient(
+		to right bottom,
+		rgba(219, 214, 140, 0.7),
+		rgba(255, 255, 255, 0.5)
+	);
+	border-radius: 2rem;
+	padding: 1rem;
+}
+/* div {
+	border: 1px black solid;
+} */
+
+.displaysection {
+	display: flex;
+	justify-content: center;
+	justify-content: space-around;
+}
+#calorieselection {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 1.3em;
+	margin-bottom: 1em;
+}
+#title {
+	margin-top: 0.6em;
+	text-align: center;
+	margin-bottom: 1em;
+	font-size: 3em;
+	letter-spacing: 0.6em;
+	font-weight: 600;
+	color: rgb(35, 49, 24);
+	text-shadow: 1px 2px 2px rgba(158, 34, 34, 0.411);
+	text-transform: uppercase;
+	text-shadow: #ce6666 5px 5px 10px;
+}
+#firstgroup {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 50vh;
+}
+#addNew {
+	font-size: 1.4em;
+	margin-right: 1.5em;
+	margin-left: 1.5em;
+}
+form > input {
+	height: 25px;
+	border: none;
+	border-radius: 10px;
+	padding-left: 0.7em;
+}
+.forms {
+	border-bottom: 2px solid rgb(94, 93, 93);
+	padding-bottom: 0.7em;
+	border-bottom-style: dotted;
+}
+#ingredients {
+	font-size: 1.3em;
+	min-width: 20vw;
+}
+#ingredientstitle {
+	text-align: center;
+	border-bottom: 2px solid rgb(94, 93, 93);
+	border-bottom-style: dotted;
+	margin-bottom: 1vh;
+}
+form > button {
+	margin-left: 1em;
+	padding: 0.3em;
+}
+button {
+	cursor: pointer;
+}
+.forms {
+	margin: 0 0 1.5em;
+}
+#calories {
+	margin-right: 0.5em;
+}
+#recipes {
+	max-width: 70%;
+	min-width: 60%;
+}
+
+li {
+	display: flex;
+	justify-content: space-between;
+	list-style: numeric;
+}
+li > button {
+	width: 2.5vw;
+	font-size: 1em;
+	transition-duration: 0.4s;
+	border-radius: 4px;
+}
+li > button:hover {
+	background-color: #555555;
+	color: white;
+	width: 2.5vw;
+	font-size: 1em;
+}
+.listitem {
+	border-bottom: 2px solid rgb(94, 93, 93);
+	border-bottom-style: double;
+	margin-bottom: 1vh;
+	text-transform: capitalize;
+	padding-bottom: 0.3em;
+}
+#showrecipe {
+	padding: 0.5em;
+	transition: all 0.5s;
+	background-color: #f4511e;
+	border: none;
+	color: #ffffff;
+	width: 130px;
+	border-radius: 5px;
+}
+#showrecipe span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+#showrecipe span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+#showrecipe:hover span {
+	padding-right: 25px;
+}
+#showrecipe:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+.sidebyside {
+	display: flex;
+	justify-content: space-between;
+	margin: 1em 0 0 0;
+}
+.recipename {
+	border-bottom: 2px solid rgb(94, 93, 93);
+	box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.253);
+	font-size: 1.5em;
+	display: flex;
+	justify-content: space-between;
+	margin: 1em 0 0 0;
+	padding: 0.5em;
+	text-transform: uppercase;
+	align-items: center;
+	border-radius: 4px;
+}
+.recipecalories {
+	box-shadow: 0px 1px 1px 0px rgb(71, 71, 71);
+	padding: 0.3em;
+	border-radius: 50%;
+	color: rgba(52, 53, 52, 0.685);
+	font-size: 1.3em;
+	letter-spacing: 0.2em;
+}
+.recipeimage {
+	width: 280px;
+	height: 280px;
+	border-radius: 50%;
+	filter: drop-shadow(0 0 0.75rem crimson);
+}
+.recipeingredients {
+	display: flex;
+	align-items: center;
+	font-size: 1.2em;
+}
+#content > div {
+	margin: 0 0 1em 0;
+	padding: 1em;
+	padding-bottom: 3.5em;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background: linear-gradient(
+		to right bottom,
+		rgba(219, 214, 140, 0.842),
+		rgba(255, 255, 255, 0.7)
+	);
+	border-radius: 8%;
+}
+.recipemethod {
+	font-size: 1.2em;
+}

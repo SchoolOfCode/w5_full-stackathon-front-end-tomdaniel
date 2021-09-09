@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Food Planner</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="main.js" defer></script>
+	</head>
+	<body>
+		<div class="main">
+			<div class="container">
+				<h1 id="title">Recipe finder</h1>
+				<div class="forms">
+					<form action="">
+						<label for="ingredient" id="addNew">Add new ingredient:</label>
+						<input type="text" placeholder="Add new ingredient" required id="addI" />
+						<button type="submit" id="submitI">Add Ingredient</button>
+					</form>
+				</div>
+				<div class="displaysection">
+					<div id="ingredients"><p id="ingredientstitle">Ingredient List</p></div>
+					<div id="recipes">
+						<div id="calorieselection">
+							<div id="firstgroup">
+								<label for="calories">How many calories</label>
+								<input
+									type="range"
+									id="calories"
+									min="200"
+									max="1500"
+									name="calories"
+								/><span id="showCal">1000</span>
+							</div>
+							<button id="showrecipe"><span>Show Recipes</span></button>
+						</div>
+						<div id="content"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
